@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app>
+
+<head>
+  <title>Angular Sample 03</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h3>Sample 03</h3>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <ul>
+          <li ng-init="a = 12.5445">{{a | currency:USD:1}}</li>
+          <li ng-init="b = 3.14354657">{{b | number:2}}</li>
+          <li ng-init="c = '2015-04-21'">{{c | date}}</li>
+          <li ng-init="d = {name:'Jon Snow'}">{{d | json}}</li>
+          <li ng-init="e = 'Jon Snow'">{{e | lowercase}}</li>
+          <li ng-init="f = 'Jon Snow'">{{f | uppercase}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</body>
+
+</html>

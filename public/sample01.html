@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app>
+
+<head>
+  <title>Angular Sample 01</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h3>Sample 01</h3>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-1 text-right">x = </label>
+            <div class="col-sm-4">
+              <input class="form-control" type="number" ng-model="x" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-1 text-right">y = </label>
+            <div class="col-sm-4">
+              <input class="form-control" type="number" ng-model="y" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-1 text-right">{{x||"x"}} + {{y||"y"}} = </label>
+            <div class="col-sm-4">
+              <p class="form-control-static">{{x + y}}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-1 text-right">name: </label>
+            <div class="col-sm-6">
+              <input class="form-control" type="text" ng-model="name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-1 text-right">name: </label>
+            <div class="col-sm-6">
+              <p ng-bind="name"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</body>
+
+</html>

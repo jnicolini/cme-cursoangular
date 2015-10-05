@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="myApp">
+
+<head>
+  <title>Angular Sample 01</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h3>Sample 01</h3>
+
+<div>
+  <div ng-init="x = [ {nombre: 'Juanolo', temporada: 1}, {nombre: 'seabashan', temporada: 2}]"> 
+
+<ul>
+  <li ng-repeat= "item in x">{{item.nombre}} MUERE COMO IDIOTA EN LA TEMPORADA <span ng-bind="item.temporada"></span></li>
+
+  <li ng-init="a = 12.2352352"> {{ a | currency:"juanolo$":3}} </li>
+
+  <li ng-init="b = 17298507294867349867938476983763892"> {{ b | number:3}} </li>
+
+  <li ng-init="c= '2015-02-15'"> {{ c | date}}</li>
+
+  <li ng-init="d = {nombre: 'Juanolo', temporada: 1}"> {{ d | json}} </li>
+
+  <li ng-init="e = 'Juanolo'"> {{ e | lowercase}} </li>
+  <li ng-init="f = 'Juanolo'"> {{ f | uppercase}} </li>
+
+  <li ng-init="g = 'Juanolo'"> {{ g | myFilterA}} </li>
+
+<li ng-init="h = 'Juanolo'"> {{ h | myFilterB:"hola"}}  </li>
+
+  
+  
+
+  
+</ul>
+
+  </div>
+</div>
+
+</div>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+<!--filtros-->
+    <script>
+        angular.module("myApp", []) 
+
+        .filter("myFilterA", function() {
+          return function(input){
+            return "[" + input + "]";
+          };
+        }).filter("myFilterB", function() {
+          return function(input, tag){
+            if (!tag) {
+              tag = "error";
+            }
+            return "[" +tag+ "]:" + input ;
+          }
+        });
+    </script>
+
+
+</body>
+
+</html>
